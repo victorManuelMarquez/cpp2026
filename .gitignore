@@ -1,0 +1,4 @@
+# excluir la carpeta build
+/build/
+# excluir VSCode settings
+.vscode/
