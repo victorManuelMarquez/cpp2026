@@ -20,7 +20,7 @@ struct Cola {
 void insertar(Cola &c, int valor);
 void quitar(Cola &c);
 void vaciar(Cola &c);
-inline int generar(int min = 0, int max = 10) { return (rand() % (max + 1)) + min; };
+inline int generar(int min = 0, int max = 10) { return (rand() % (max - min + 1)) + min; };
 
 int main() {
     std::srand(time({}));
