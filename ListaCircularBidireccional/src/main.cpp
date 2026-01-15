@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <ctime>
 
 struct Nodo {
     int dato;
@@ -10,12 +11,15 @@ struct Nodo {
 void insertar(Nodo*& nodo, int valor, bool frente = false);
 void mostrar(Nodo*& origen, bool reversa = false);
 int quitar(Nodo*& nodo, bool reversa = false);
+inline int generar(const int min = 0, const int max = 100) { return min + (rand() % (max - min + 1)); }
 
 int main() {
+    std::srand(std::time({}));
     Nodo* lista = nullptr;
-    insertar(lista, 88);
-    insertar(lista, 11, true);
-    insertar(lista, 0);
+    for (int i = 0; i < generar(5, 10); i++) {
+        insertar(lista, generar());
+    }
+    insertar(lista, generar(), true);
     mostrar(lista);
     mostrar(lista, true);
     while (lista) {
