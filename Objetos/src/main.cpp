@@ -1,22 +1,8 @@
 #include <iostream>
-#include <string>
-
-using std::string;
-
-class Persona {
-    public:
-        string nombre, apellido;
-    
-    public:
-        string info() {
-            return nombre + " " + apellido;
-        }
-};
+#include <persona.hpp>
 
 int main() {
-    Persona persona;
-    persona.nombre = "Juan";
-    persona.apellido = "Perez";
+    Persona persona("Juan", "Perez");
     std::cout << persona.info() << std::endl;
     return 0;
 }
