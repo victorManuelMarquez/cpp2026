@@ -39,5 +39,14 @@ int main() {
     } else {
         std::cout << "El Objeto ha sido destruído." << std::endl;
     }
+    // punteros de C
+    std::cout << "Punteros clásicos:" << std::endl;
+    int valor = 200;
+    int* puntero = &valor;
+    int** puntero2 = &puntero;
+    std::cout << "int valor:= " << valor << " (" << puntero << ")" << std::endl;
+    std::cout << "int* puntero:= " << puntero << " (" << &puntero << ")" << std::endl;
+    std::cout << "int** puntero2:= " << puntero2 << " (" << &puntero2 << ")" << std::endl;
+    // no es necesario usar delete en este caso
     return 0;
 }
