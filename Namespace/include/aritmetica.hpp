@@ -1,6 +1,8 @@
 #ifndef ARITMETICA_HPP
 #define ARITMETICA_HPP
 
+#include <stdexcept>
+
 namespace Aritmetica {
 
     template <typename T>
@@ -20,6 +22,9 @@ namespace Aritmetica {
 
     template <typename T>
     T division(T a, T b) {
+        if (b == 0) {
+            throw std::runtime_error("Error: división por 0");
+        }
         return a / b;
     }
 
