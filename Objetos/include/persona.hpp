@@ -9,7 +9,8 @@ class Persona {
     
     public:
         Persona(std::string nombre, std::string apellido);
-        std::string info();
+        virtual ~Persona() = default;
+        virtual std::string info();
 };
 
 #endif
