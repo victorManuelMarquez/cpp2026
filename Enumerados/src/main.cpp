@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <array>
+#include <cstdio>
+#include <ctime>
 
 // enumerado
 enum dias {
@@ -11,6 +13,22 @@ enum dias {
     Viernes,
     Sabado,
     Domingo
+};
+
+// enumerado tipo clase
+enum class meses {
+    Enero = 1,
+    Febrero,
+    Marzo,
+    Abril,
+    Mayo,
+    Junio,
+    Julio,
+    Agosto,
+    Septiembre,
+    Octubre,
+    Noviembre,
+    Diciembre
 };
 
 // debido a que iterar un enum no es posible, se emplea un array
@@ -30,11 +48,41 @@ std::string aTexto(dias valor) {
     }
 }
 
+// retornar el valor de cada mes
+std::string nombre(meses mes) {
+    switch(mes) {
+        case meses::Enero: return "Enero";
+        case meses::Febrero: return "Febrero";
+        case meses::Marzo: return "Marzo";
+        case meses::Abril: return "Abril";
+        case meses::Mayo: return "Mayo";
+        case meses::Junio: return "Junio";
+        case meses::Julio: return "Julio";
+        case meses::Agosto: return "Agosto";
+        case meses::Septiembre: return "Septiembre";
+        case meses::Octubre: return "Octubre";
+        case meses::Noviembre: return "Noviembre";
+        case meses::Diciembre: return "Diciembre";
+        default: return "Desconocido";
+    }
+}
+
+inline int randomIndex(int value) {
+    return std::rand() % value;
+};
+
 int main() {
+    // semilla random
+    std::srand(std::time({}));
     // muestro todos los valores
     for (auto dia : semana) {
         std::cout << "Día: " << aTexto(dia) << std::endl;
     }
+    // Primer cuatrimestre
+    std::array<meses, 3> trimestre = { meses::Enero, meses::Febrero, meses::Marzo };
+    auto mes = trimestre[randomIndex(trimestre.size())];
+    std::cout << "Mes aleatorio (primer cuatrimestre): " << nombre(mes) << std::endl;
+
     std::cout << "Fin del programa." << std::endl;
     return 0;
 }
