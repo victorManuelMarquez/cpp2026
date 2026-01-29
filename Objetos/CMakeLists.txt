@@ -5,5 +5,6 @@ target_sources(${PROJECT_NAME} PRIVATE
     src/main.cpp
     src/persona.cpp
     src/empleado.cpp
+    src/personaje.cpp
 )
 target_include_directories(${PROJECT_NAME} PRIVATE include)

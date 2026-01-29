@@ -2,6 +2,7 @@
 #include <vector>
 #include <persona.hpp>
 #include <empleado.hpp>
+#include <personaje.hpp>
 
 int main() {
     // vector para almacenar la colección de Persona
@@ -21,6 +22,9 @@ int main() {
     for (Persona* p : gente) {
         delete p;
     }
+    // Nueva clase
+    Personaje personaje1(1, "Heroe");
+    std::cout << personaje1.detalles() << std::endl;
     std::cout << "Fin del programa." << std::endl;
     return 0;
 }
