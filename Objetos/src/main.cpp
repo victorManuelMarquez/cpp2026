@@ -23,7 +23,7 @@ int main() {
         delete p;
     }
     // Nueva clase
-    Personaje personaje1(1, "Heroe");
+    Personaje personaje1(1, "Heroe", 100, 1);
     std::cout << personaje1.detalles() << std::endl;
     std::cout << "Fin del programa." << std::endl;
     return 0;
