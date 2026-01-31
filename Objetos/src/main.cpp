@@ -24,7 +24,9 @@ int main() {
     }
     // Nueva clase
     Personaje personaje1(1, "Heroe", 100, 1);
+    Personaje villano{2, "Villano", 110, 2}; // construcción uniforme
     std::cout << personaje1.detalles() << std::endl;
+    std::cout << villano.detalles() << std::endl;
     std::cout << "Fin del programa." << std::endl;
     return 0;
 }
