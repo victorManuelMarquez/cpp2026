@@ -22,11 +22,18 @@ int main() {
     for (Persona* p : gente) {
         delete p;
     }
-    // Nueva clase
-    Personaje personaje1(1, "Heroe", 100, 1);
-    Personaje villano{2, "Villano", 110, 2}; // construcción uniforme
-    std::cout << personaje1.detalles() << std::endl;
+
+    // Personajes
+    Personaje heroe(1, "Heroe", 100, 1, 10);
+    Personaje villano{ 2, "Villano", 110, 2, 11 }; // construcción uniforme
+
+    std::cout << heroe.detalles() << std::endl;
     std::cout << villano.detalles() << std::endl;
+    
+    std::cout << heroe.getNombre() << " atacando a " << villano.getNombre() << std::endl;
+    heroe.atacar(villano, heroe.getFuerza());
+    std::cout << villano.detalles() << std::endl;
+
     std::cout << "Fin del programa." << std::endl;
     return 0;
 }
