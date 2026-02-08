@@ -1,13 +1,13 @@
 #include "Grafo.hpp"
 
 int main() {
-    Grafo g(4);
-    g.agregarArista(0, 1);
-    g.agregarArista(0, 2);
-    g.agregarArista(1, 2);
-    g.agregarArista(2, 0);
-    g.agregarArista(2, 3);
-    g.agregarArista(3, 3);
-    g.imprimir();
+    listaAdyacente::Grafo listaAdyacente(4);
+    listaAdyacente.agregarArista(0, 1);
+    listaAdyacente.agregarArista(0, 2);
+    listaAdyacente.agregarArista(1, 2);
+    listaAdyacente.agregarArista(2, 0);
+    listaAdyacente.agregarArista(2, 3);
+    listaAdyacente.agregarArista(3, 3);
+    listaAdyacente.imprimir();
     return 0;
 }

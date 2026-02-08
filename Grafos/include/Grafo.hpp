@@ -4,20 +4,24 @@
 #include <vector>
 #include <list>
 
-class Grafo {
+namespace listaAdyacente {
 
-    private:
-        int n;
-        std::vector<std::list<int>> grafo;
+    class Grafo {
 
-    public:
-        // Constructor
-        Grafo(int n);
-        // Destructor
-        ~Grafo() = default;
-        // Operaciones
-        void agregarArista(int i, int n);
-        void imprimir();
-};
+        private:
+            int n;
+            std::vector<std::list<int>> grafo;
+
+        public:
+            // Constructor
+            Grafo(int n);
+            // Destructor
+            ~Grafo() = default;
+            // Operaciones
+            void agregarArista(int i, int n);
+            void imprimir();
+    };
+    
+}
 
 #endif
