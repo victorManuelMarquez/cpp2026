@@ -24,4 +24,22 @@ namespace listaAdyacente {
     
 }
 
+namespace matrizAdyacente {
+
+    class Grafo {
+
+        private:
+            int n;
+            std::vector<std::vector<int>> grafo;
+        
+        public:
+            Grafo(int n);
+            ~Grafo() = default;
+            void agregarArista(int i, int j);
+            void imprimir();
+
+    };
+
+}
+
 #endif
